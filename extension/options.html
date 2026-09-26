@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Drive Document Zoom – Options</title>
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 16px; min-width: 320px; }
+    label { display: block; margin: 12px 0 4px; font-weight: 600; }
+    select, input[type=number] { font: inherit; padding: 4px; }
+    .check { font-weight: normal; }
+    #status { color: #188038; margin-top: 12px; height: 1em; }
+  </style>
+</head>
+<body>
+  <label for="modifier">Keys to hold while scrolling</label>
+  <select id="modifier">
+    <option value="ctrlAlt">Ctrl + Alt</option>
+    <option value="alt">Alt</option>
+    <option value="ctrlShift">Ctrl + Shift</option>
+    <option value="altShift">Alt + Shift</option>
+  </select>
+
+  <label for="step">Zoom step per wheel notch (%)</label>
+  <input id="step" type="number" min="1" max="100" step="1">
+
+  <label class="check"><input id="invert" type="checkbox"> Invert direction (scroll up zooms out)</label>
+
+  <div id="status"></div>
+
+  <script src="defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

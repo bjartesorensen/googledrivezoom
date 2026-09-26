@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Drive Document Zoom",
+  "version": "1.0.0",
+  "description": "Zoom Google Docs, Sheets, Slides and Drive previews with Ctrl+Alt+scroll wheel, without zooming the whole browser page.",
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/*", "https://drive.google.com/*"],
+      "js": ["defaults.js", "settings-bridge.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": ["https://docs.google.com/*", "https://drive.google.com/*"],
+      "js": ["zoom.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    }
+  ]
+}
