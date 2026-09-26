@@ -198,7 +198,7 @@
     if (zoomViaInput(dir, step)) return;
     if (zoomViaButton(dir)) return;
     if (zoomViaShortcut(dir)) return;
-    if (window.console) console.debug("[Drive Document Zoom] no zoom control found on this page");
+    if (window.console) console.debug("[Document Zoom for Google Drive] no zoom control found on this page");
   }
 
   function onWheel(e) {

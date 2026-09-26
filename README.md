@@ -1,4 +1,4 @@
-# Drive Document Zoom (Chrome extension)
+# Document Zoom for Google Drive (Chrome extension)
 
 Zoom Google Docs, Sheets, Slides and Drive file previews (PDFs and so on) with
 **Ctrl + Alt + mouse wheel**. Only the document zooms. The browser page, including
@@ -42,3 +42,11 @@ on `chrome://extensions`. You can set:
   If nothing happens, choose another modifier in Options.
 - The script runs in the page's own JavaScript context (`"world": "MAIN"`), so
   it needs Chrome 111 or newer.
+
+## Publishing to the Chrome Web Store
+
+1. Run `./build.sh`. It creates `dist/document-zoom-<version>.zip`.
+2. Upload the zip in the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
+3. Copy the listing text and privacy answers from [`store/LISTING.md`](store/LISTING.md).
+   The privacy policy is [`PRIVACY.md`](PRIVACY.md).
+4. For each update, raise `"version"` in `extension/manifest.json` and build again.
